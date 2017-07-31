@@ -51,5 +51,15 @@ namespace Asociacion.GUI
         {
 
         }
+
+        private void txtContrasenna_TextChanged(object sender, EventArgs e)
+        {
+            lblmensaje.Text = "";
+        }
+
+        private void txtUsuario_TextChanged(object sender, EventArgs e)
+        {
+            lblmensaje.Text = "";
+        }
     }
 }

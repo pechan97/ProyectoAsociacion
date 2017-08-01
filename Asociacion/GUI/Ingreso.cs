@@ -35,10 +35,10 @@ namespace Asociacion.GUI
             i = ibo.Autentificar(i);
             if (i.Id > 0)
             {
-                Arquiler ventanaarquiler = new Arquiler()
+                Principal ventanaPrincipal = new Principal()
                 {
                 };
-                ventanaarquiler.Show(this);
+                ventanaPrincipal.Show(this);
                 this.Hide();
             }
             else

@@ -612,7 +612,7 @@
             this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGuardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGuardar.ForeColor = System.Drawing.Color.White;
-            this.btnGuardar.Location = new System.Drawing.Point(322, 443);
+            this.btnGuardar.Location = new System.Drawing.Point(377, 443);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(92, 34);
             this.btnGuardar.TabIndex = 2;
@@ -651,7 +651,7 @@
             this.btnbuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnbuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnbuscar.ForeColor = System.Drawing.Color.Transparent;
-            this.btnbuscar.Location = new System.Drawing.Point(226, 442);
+            this.btnbuscar.Location = new System.Drawing.Point(281, 443);
             this.btnbuscar.Name = "btnbuscar";
             this.btnbuscar.Size = new System.Drawing.Size(90, 34);
             this.btnbuscar.TabIndex = 5;

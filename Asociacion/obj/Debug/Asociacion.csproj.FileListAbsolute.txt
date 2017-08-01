@@ -13,3 +13,4 @@ C:\Users\dgvil\OneDrive\Documentos\Visual Studio 2017\Projects\Asociacion\Asocia
 C:\Users\dgvil\OneDrive\Documentos\Visual Studio 2017\Projects\Asociacion\Asociacion\obj\Debug\Asociacion.GUI.ButIngreso.resources
 C:\Users\dgvil\OneDrive\Documentos\Visual Studio 2017\Projects\Asociacion\Asociacion\obj\Debug\Asociacion.GUI.Arquiler.resources
 C:\Users\dgvil\OneDrive\Documentos\Visual Studio 2017\Projects\Asociacion\Asociacion\obj\Debug\Asociacion.GUI.busqueda.resources
+C:\Users\dgvil\OneDrive\Documentos\Visual Studio 2017\Projects\Asociacion\Asociacion\obj\Debug\Asociacion.GUI.Principal.resources

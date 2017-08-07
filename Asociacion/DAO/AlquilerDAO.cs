@@ -73,7 +73,9 @@ namespace Asociacion.DAO
                 using (NpgsqlConnection con = new NpgsqlConnection(Configuracion.CadenaConexion))
                 {
                     con.Open();
-                    string sql = @"SELECT * FROM usuario";
+                    string sql = @"SELECT nombre, fecha, telefono, lugar, num_mesas, 
+                             num_sillas,num_manteles, num_lasos, num_cobertor, num_sobre_mantel,
+                             num_sillas_verdes,num_sillas_blancas,precio FROM usuario";
 
                     NpgsqlCommand cmd = new NpgsqlCommand(sql, con);
                     try

@@ -41,6 +41,7 @@
             this.btnGuardar = new System.Windows.Forms.Button();
             this.btnBuscar = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
+            this.lblMensaje = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label21
@@ -94,6 +95,7 @@
             this.txtDescripcion.Name = "txtDescripcion";
             this.txtDescripcion.Size = new System.Drawing.Size(281, 46);
             this.txtDescripcion.TabIndex = 11;
+            this.txtDescripcion.TextChanged += new System.EventHandler(this.txtDescripcion_TextChanged);
             // 
             // label2
             // 
@@ -114,6 +116,8 @@
             this.txtMonto.Name = "txtMonto";
             this.txtMonto.Size = new System.Drawing.Size(144, 24);
             this.txtMonto.TabIndex = 13;
+            this.txtMonto.TextChanged += new System.EventHandler(this.txtMonto_TextChanged);
+            this.txtMonto.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtMonto_KeyPress);
             // 
             // label3
             // 
@@ -138,6 +142,7 @@
             // btnGuardar
             // 
             this.btnGuardar.BackColor = System.Drawing.Color.Transparent;
+            this.btnGuardar.Enabled = false;
             this.btnGuardar.FlatAppearance.BorderSize = 3;
             this.btnGuardar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DimGray;
             this.btnGuardar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
@@ -150,6 +155,7 @@
             this.btnGuardar.TabIndex = 16;
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.UseVisualStyleBackColor = false;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
             // btnBuscar
             // 
@@ -166,6 +172,7 @@
             this.btnBuscar.TabIndex = 17;
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.UseVisualStyleBackColor = false;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // label4
             // 
@@ -180,12 +187,24 @@
             this.label4.Text = "La suma de:";
             this.label4.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
+            // lblMensaje
+            // 
+            this.lblMensaje.BackColor = System.Drawing.Color.Transparent;
+            this.lblMensaje.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMensaje.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.lblMensaje.Location = new System.Drawing.Point(39, 353);
+            this.lblMensaje.Name = "lblMensaje";
+            this.lblMensaje.Size = new System.Drawing.Size(428, 31);
+            this.lblMensaje.TabIndex = 19;
+            this.lblMensaje.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
             // Recibos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(501, 393);
+            this.Controls.Add(this.lblMensaje);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.btnGuardar);
@@ -219,5 +238,6 @@
         private System.Windows.Forms.Button btnGuardar;
         private System.Windows.Forms.Button btnBuscar;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label lblMensaje;
     }
 }

@@ -32,7 +32,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.btnAlquiler = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.btnRecibo = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -79,22 +79,23 @@
             this.btnAlquiler.UseVisualStyleBackColor = false;
             this.btnAlquiler.Click += new System.EventHandler(this.btnAlquiler_Click);
             // 
-            // button4
+            // btnRecibo
             // 
-            this.button4.BackColor = System.Drawing.Color.Transparent;
-            this.button4.Cursor = System.Windows.Forms.Cursors.Default;
-            this.button4.FlatAppearance.BorderSize = 3;
-            this.button4.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
-            this.button4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.ForeColor = System.Drawing.Color.White;
-            this.button4.Location = new System.Drawing.Point(217, 90);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(93, 31);
-            this.button4.TabIndex = 5;
-            this.button4.Text = "Recibos";
-            this.button4.UseVisualStyleBackColor = false;
+            this.btnRecibo.BackColor = System.Drawing.Color.Transparent;
+            this.btnRecibo.Cursor = System.Windows.Forms.Cursors.Default;
+            this.btnRecibo.FlatAppearance.BorderSize = 3;
+            this.btnRecibo.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
+            this.btnRecibo.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
+            this.btnRecibo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRecibo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRecibo.ForeColor = System.Drawing.Color.White;
+            this.btnRecibo.Location = new System.Drawing.Point(217, 90);
+            this.btnRecibo.Name = "btnRecibo";
+            this.btnRecibo.Size = new System.Drawing.Size(93, 31);
+            this.btnRecibo.TabIndex = 5;
+            this.btnRecibo.Text = "Recibos";
+            this.btnRecibo.UseVisualStyleBackColor = false;
+            this.btnRecibo.Click += new System.EventHandler(this.button4_Click);
             // 
             // Principal
             // 
@@ -102,7 +103,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(407, 218);
-            this.Controls.Add(this.button4);
+            this.Controls.Add(this.btnRecibo);
             this.Controls.Add(this.btnAlquiler);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -118,6 +119,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnAlquiler;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button btnRecibo;
     }
 }

@@ -53,11 +53,14 @@
   <ItemGroup>
     <Compile Include="BO\AlquilerBO.cs" />
     <Compile Include="BO\IngresoBO.cs" />
+    <Compile Include="BO\ReciboBO.cs" />
     <Compile Include="DAO\AlquilerDAO.cs" />
     <Compile Include="DAO\Configuracion.cs" />
     <Compile Include="DAO\IngresoDAO.cs" />
+    <Compile Include="DAO\ReciboDAO.cs" />
     <Compile Include="Entidades\Alquiler.cs" />
     <Compile Include="Entidades\Ingreso.cs" />
+    <Compile Include="Entidades\Recibo.cs" />
     <Compile Include="GUI\Arquiler.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -69,6 +72,12 @@
     </Compile>
     <Compile Include="GUI\Busqueda.Designer.cs">
       <DependentUpon>Busqueda.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\BusquedaRecibo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\BusquedaRecibo.Designer.cs">
+      <DependentUpon>BusquedaRecibo.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\Ingreso.cs">
       <SubType>Form</SubType>
@@ -95,6 +104,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\Busqueda.resx">
       <DependentUpon>Busqueda.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\BusquedaRecibo.resx">
+      <DependentUpon>BusquedaRecibo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\Ingreso.resx">
       <DependentUpon>Ingreso.cs</DependentUpon>

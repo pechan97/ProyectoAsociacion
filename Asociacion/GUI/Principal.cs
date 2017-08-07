@@ -25,5 +25,14 @@ namespace Asociacion.GUI
             ventanaarquiler.Show(this);
             this.Hide();
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            Recibos ventanarecibo = new Recibos()
+            {
+            };
+            ventanarecibo.Show(this);
+            this.Hide();
+        }
     }
 }

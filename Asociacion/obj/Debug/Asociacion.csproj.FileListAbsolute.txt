@@ -17,3 +17,23 @@ C:\Users\dgvil\OneDrive\Documentos\Visual Studio 2017\Projects\Asociacion\Asocia
 C:\Users\dgvil\OneDrive\Documentos\Visual Studio 2017\Projects\Asociacion\Asociacion\obj\Debug\Asociacion.GUI.Recibos.resources
 C:\Users\dgvil\OneDrive\Documentos\Visual Studio 2017\Projects\Asociacion\Asociacion\obj\Debug\Asociacion.GUI.BusquedaRecibo.resources
 C:\Users\dgvil\OneDrive\Documentos\Visual Studio 2017\Projects\Asociacion\Asociacion\obj\Debug\Asociacion.GUI.EditarRecibo.resources
+C:\Users\dgvil\Desktop\ProyectoAsociacion\Asociacion\bin\Debug\Asociacion.exe.config
+C:\Users\dgvil\Desktop\ProyectoAsociacion\Asociacion\bin\Debug\Asociacion.exe
+C:\Users\dgvil\Desktop\ProyectoAsociacion\Asociacion\bin\Debug\Asociacion.pdb
+C:\Users\dgvil\Desktop\ProyectoAsociacion\Asociacion\bin\Debug\Npgsql.dll
+C:\Users\dgvil\Desktop\ProyectoAsociacion\Asociacion\bin\Debug\System.Threading.Tasks.Extensions.dll
+C:\Users\dgvil\Desktop\ProyectoAsociacion\Asociacion\bin\Debug\Npgsql.xml
+C:\Users\dgvil\Desktop\ProyectoAsociacion\Asociacion\bin\Debug\System.Threading.Tasks.Extensions.xml
+C:\Users\dgvil\Desktop\ProyectoAsociacion\Asociacion\obj\Debug\Asociacion.csprojResolveAssemblyReference.cache
+C:\Users\dgvil\Desktop\ProyectoAsociacion\Asociacion\obj\Debug\Asociacion.GUI.Arquiler.resources
+C:\Users\dgvil\Desktop\ProyectoAsociacion\Asociacion\obj\Debug\Asociacion.GUI.busqueda.resources
+C:\Users\dgvil\Desktop\ProyectoAsociacion\Asociacion\obj\Debug\Asociacion.GUI.BusquedaRecibo.resources
+C:\Users\dgvil\Desktop\ProyectoAsociacion\Asociacion\obj\Debug\Asociacion.GUI.EditarAlquiler.resources
+C:\Users\dgvil\Desktop\ProyectoAsociacion\Asociacion\obj\Debug\Asociacion.GUI.EditarRecibo.resources
+C:\Users\dgvil\Desktop\ProyectoAsociacion\Asociacion\obj\Debug\Asociacion.GUI.ButIngreso.resources
+C:\Users\dgvil\Desktop\ProyectoAsociacion\Asociacion\obj\Debug\Asociacion.GUI.Principal.resources
+C:\Users\dgvil\Desktop\ProyectoAsociacion\Asociacion\obj\Debug\Asociacion.GUI.Recibos.resources
+C:\Users\dgvil\Desktop\ProyectoAsociacion\Asociacion\obj\Debug\Asociacion.Properties.Resources.resources
+C:\Users\dgvil\Desktop\ProyectoAsociacion\Asociacion\obj\Debug\Asociacion.csproj.GenerateResource.Cache
+C:\Users\dgvil\Desktop\ProyectoAsociacion\Asociacion\obj\Debug\Asociacion.exe
+C:\Users\dgvil\Desktop\ProyectoAsociacion\Asociacion\obj\Debug\Asociacion.pdb

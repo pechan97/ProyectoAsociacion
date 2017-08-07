@@ -79,6 +79,12 @@
     <Compile Include="GUI\BusquedaRecibo.Designer.cs">
       <DependentUpon>BusquedaRecibo.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\EditarAlquiler.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\EditarAlquiler.Designer.cs">
+      <DependentUpon>EditarAlquiler.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\EditarRecibo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -113,6 +119,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\BusquedaRecibo.resx">
       <DependentUpon>BusquedaRecibo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\EditarAlquiler.resx">
+      <DependentUpon>EditarAlquiler.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\EditarRecibo.resx">
       <DependentUpon>EditarRecibo.cs</DependentUpon>

@@ -18,7 +18,7 @@ namespace Asociacion.BO
         /// <summary>
         /// Método que valora si no está en null los datos que no deben estarlo
         /// </summary>
-        /// <param name="alquiler"></param> Recibe un Participante como parámetro
+        /// <param name="alquiler">Recibe un Participante como parámetro</param> 
         public bool Registrar(Alquiler alquiler)
         {
             if (String.IsNullOrEmpty(alquiler.Nombre))

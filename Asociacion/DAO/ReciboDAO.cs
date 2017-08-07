@@ -15,8 +15,8 @@ namespace Asociacion.DAO
         /// <summary>
         /// Método que inserta a un nuevo recibo
         /// </summary>
-        /// <param name="recibo"></param> Recibe un recibo como parámetro
-        /// <returns></returns>Retorna el id del recibo
+        /// <param name="recibo">Recibe un recibo como parámetro</param> 
+        /// <returns>Retorna el id del recibo</returns>
         public bool Insertar(Recibo recibo)
         {
             NpgsqlTransaction tran = null;
@@ -49,6 +49,11 @@ namespace Asociacion.DAO
             }
 
         }
+        /// <summary>
+        /// Método que muestra los recibos buscados por el usuario
+        /// </summary>
+        /// <param name="consulta">Parámetro Recibe la búsqueda del usuario</param>
+        /// <param name="dgv">Parámetro que recibo los datos a mostrar en la interfaz</param>
         public void Select(string consulta, DataGridView dgv)
         {
             string a = consulta.ToUpper();
@@ -101,6 +106,11 @@ namespace Asociacion.DAO
             }
 
         }
+        /// <summary>
+        /// Método que modifica el recibo
+        /// </summary>
+        /// <param name="recibo">Recibe un Recibo cómo parámetro</param>
+        /// <returns>Retorna si el id del recibo a modificar es mayor a 0</returns>
         public bool Modificar(Recibo recibo)
         {
             NpgsqlTransaction tran = null;
@@ -135,6 +145,12 @@ namespace Asociacion.DAO
                 throw new Exception(ex.Message);
             }
         }
+
+        /// <summary>
+        /// Método que selecciona un recibo por id y trae sus propiedades
+        /// </summary>
+        /// <param name="id">Parámetro que recibe el id a modificar</param>
+        /// <returns>Retorna el recibo encontrado</returns>
         public Recibo SelectId(int id)
         {
             try

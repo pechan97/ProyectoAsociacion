@@ -1,4 +1,4 @@
-﻿using Asociacion.BO;
+﻿using Asociacion.DAO;
 using Asociacion.Entidades;
 using System;
 using System.Collections.Generic;
@@ -7,29 +7,55 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
-using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Asociacion.GUI
 {
-    public partial class Arquiler : Form
+    public partial class EditarAlquiler : Form
     {
-        private AlquilerBO abo;
-        public Alquiler Alquiler { get; set; }
-        public Arquiler()
+        public int Id { get; set; }
+        Alquiler alquiler = new Alquiler();
+        public EditarAlquiler()
         {
             InitializeComponent();
         }
 
-        private void txtNombre_KeyPress(object sender, KeyPressEventArgs e)
+        private void EditarAlquiler_Load(object sender, EventArgs e)
         {
+            AlquilerDAO rec = new AlquilerDAO();
+            alquiler = rec.SelectId(Id);
+            try
+            {
+                lblMensaje.Text = "";
 
+                if (alquiler.Id > 0)
+                {
+                    Fecha.Text = alquiler.Fecha;
+                    txtNombre.Text = alquiler.Nombre;
+                    txtLugar.Text = alquiler.Lugar;
+                    txtTelefono.Text = alquiler.Telefono.ToString();
+                    txtMesa.Text = alquiler.Mesas.ToString();
+                    txtSilla.Text = alquiler.Sillas.ToString();
+                    txtMantel.Text = alquiler.Manteles.ToString();
+                    txtLasos.Text = alquiler.Lasos.ToString();
+                    txtCobertores.Text = alquiler.Cobertores.ToString();
+                    txtSobreM.Text = alquiler.SobreMantel.ToString();
+                    txtSillaV.Text = alquiler.SillasVerdes.ToString();
+                    txtSillaB.Text = alquiler.SillasBlancas.ToString();
+
+                }
+
+            }
+            catch (Exception ex)
+            {
+                lblMensaje.Text = ex.Message.Replace("[0-9]*", "");
+            }
         }
 
-        private void txtLugar_KeyPress(object sender, KeyPressEventArgs e)
+        private void txtNombre_KeyPress(object sender, KeyPressEventArgs e)
         {
-
+           
         }
 
         private void txtTelefono_KeyPress(object sender, KeyPressEventArgs e)
@@ -202,6 +228,57 @@ namespace Asociacion.GUI
             }
         }
 
+        private void txtNombre_TextChanged(object sender, EventArgs e)
+        {
+            var bl = !string.IsNullOrEmpty(txtNombre.Text) &&
+                     !string.IsNullOrEmpty(txtLugar.Text) &&
+                     !string.IsNullOrEmpty(txtTelefono.Text);
+
+            panel2.Enabled = bl;
+        }
+
+        private void txtLugar_TextChanged(object sender, EventArgs e)
+        {
+            var bl = !string.IsNullOrEmpty(txtNombre.Text) &&
+                     !string.IsNullOrEmpty(txtLugar.Text) &&
+                     !string.IsNullOrEmpty(txtTelefono.Text);
+
+            panel2.Enabled = bl;
+        }
+
+        private void txtTelefono_TextChanged(object sender, EventArgs e)
+        {
+            var bl = !string.IsNullOrEmpty(txtNombre.Text) &&
+                     !string.IsNullOrEmpty(txtLugar.Text) &&
+                     !string.IsNullOrEmpty(txtTelefono.Text);
+
+            panel2.Enabled = bl;
+        }
+
+        private void btnGuardar_Click(object sender, EventArgs e)
+        {
+            AlquilerDAO rec = new AlquilerDAO();
+            alquiler.Fecha = Fecha.Value.ToString("yyyy-MM-dd");
+            alquiler.Nombre = txtNombre.Text;
+            alquiler.Lugar = txtLugar.Text;
+            alquiler.Telefono = Convert.ToInt32(txtTelefono.Text);
+            alquiler.Mesas = Convert.ToInt32(txtMesa.Text);
+            alquiler.Sillas = Convert.ToInt32(txtSilla.Text);
+            alquiler.Manteles = Convert.ToInt32(txtMantel.Text);
+            alquiler.Lasos = Convert.ToInt32(txtLasos.Text);
+            alquiler.Cobertores = Convert.ToInt32(txtCobertores.Text);
+            alquiler.SobreMantel = Convert.ToInt32(txtSobreM.Text);
+            alquiler.SillasVerdes = Convert.ToInt32(txtSillaV.Text);
+            alquiler.SillasBlancas = Convert.ToInt32(txtSillaB.Text);
+            alquiler.Total = Convert.ToInt32(lblmsj.Text);
+            rec.Modificar(alquiler);
+            busqueda ventanaPrincipal = new busqueda()
+            {
+            };
+            ventanaPrincipal.Show(this);
+            this.Hide();
+        }
+
         private void btnCalcular_Click(object sender, EventArgs e)
         {
             int mesas = Int32.Parse(txtMesa.Text.Trim()) * Int32.Parse(txtPrecioMesas.Text.Trim());
@@ -217,82 +294,6 @@ namespace Asociacion.GUI
             lbltotal.Visible = true;
             lblmsj.Text = total.ToString();
             btnGuardar.Enabled = true;
-        }
-
-        private void txtNombre_TextChanged(object sender, EventArgs e)
-        {
-            var bl = !string.IsNullOrEmpty(txtNombre.Text) &&
-                       !string.IsNullOrEmpty(txtLugar.Text) &&
-                       !string.IsNullOrEmpty(txtTelefono.Text);
-
-            panel2.Enabled = bl;
-        }
-
-        private void txtLugar_TextChanged(object sender, EventArgs e)
-        {
-            var bl = !string.IsNullOrEmpty(txtNombre.Text) &&
-                       !string.IsNullOrEmpty(txtLugar.Text) &&
-                       !string.IsNullOrEmpty(txtTelefono.Text);
-
-            panel2.Enabled = bl;
-        }
-
-        private void txtTelefono_TextChanged(object sender, EventArgs e)
-        {
-            var bl = !string.IsNullOrEmpty(txtNombre.Text) &&
-                       !string.IsNullOrEmpty(txtLugar.Text) &&
-                       !string.IsNullOrEmpty(txtTelefono.Text);
-
-            panel2.Enabled = bl;
-        }
-
-        private void btnGuardar_Click(object sender, EventArgs e)
-        {
-                lblMensaje.Text = "";
-                abo = new AlquilerBO();
-            Alquiler a = new Alquiler();
-            a.Nombre = txtNombre.Text.Trim();
-            a.Fecha = Fecha.Value.ToString("yyyy-MM-dd");
-            a.Lugar = txtLugar.Text.Trim();
-            a.Telefono = Int32.Parse(txtTelefono.Text.Trim());
-            a.Mesas = Int32.Parse(txtMesa.Text.Trim());
-            a.Sillas = Int32.Parse(txtSilla.Text.Trim());
-            a.Manteles = Int32.Parse(txtMantel.Text.Trim());
-            a.Lasos = Int32.Parse(txtLasos.Text.Trim());
-            a.Cobertores = Int32.Parse(txtCobertores.Text.Trim());
-            a.SobreMantel = Int32.Parse(txtSobreM.Text.Trim());
-            a.SillasVerdes = Int32.Parse(txtSillaV.Text.Trim());
-            a.SillasBlancas = Int32.Parse(txtSillaB.Text.Trim());
-            a.Total = Int32.Parse(lblmsj.Text.Trim());
-            abo.Registrar(a);
-            lblMensaje.Text = "Alquiler registrado exitosamente";
-            btnGuardar.Enabled = false;
-            txtNombre.Text = "";
-            txtLugar.Text = "";
-            txtTelefono.Text = "";
-            txtMantel.Text = "";
-            txtSilla.Text = "";
-            txtSillaB.Text = "";
-            txtSillaV.Text = "";
-            txtMesa.Text = "";
-            txtLasos.Text = "";
-            txtCobertores.Text = "";
-            txtSobreM.Text = "";
-            lblmsj.Text = "";
-        }
-
-        private void btnbuscar_Click(object sender, EventArgs e)
-        {
-            busqueda ventanabusqueda = new busqueda()
-            {
-            };
-            ventanabusqueda.Show(this);
-            this.Hide();
-        }
-
-        private void Arquiler_Load(object sender, EventArgs e)
-        {
-
         }
 
         private void button1_Click(object sender, EventArgs e)

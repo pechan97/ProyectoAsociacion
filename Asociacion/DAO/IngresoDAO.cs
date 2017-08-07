@@ -10,11 +10,11 @@ namespace Asociacion.DAO
 {
     public class IngresoDAO
     {
-         /// <summary>
+        /// <summary>
         /// Método que autentifica si el usuario existe y la contraseña 
         /// </summary>
-        /// <param name="ingreso"></param> Recibe un ingreso como parámetro
-        /// <returns></returns> retorna la persona ingresada o un nulo si no existe
+        /// <param name="ingreso">Recibe un ingreso como parámetro</param> 
+        /// <returns>Retorna la persona ingresada o un nulo si no existe</returns> 
         public Ingreso Autentificar(Ingreso ingreso)
         {
             try

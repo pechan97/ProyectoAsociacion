@@ -49,12 +49,21 @@ namespace Asociacion.GUI
         private void btnGuardar_Click(object sender, EventArgs e)
         {
             ReciboDAO rec = new ReciboDAO();
-            recibo.Fecha = Fecha.Text;
+            recibo.Fecha = Fecha.Value.ToString("yyyy-MM-dd"); ;
             recibo.De =txtRecibDe.Text;
             recibo.Monto = Convert.ToInt32(txtMonto.Text);
             recibo.Descripcion = txtDescripcion.Text;
             rec.Modificar(recibo);
             BusquedaRecibo ventanabusqueda = new BusquedaRecibo()
+            {
+            };
+            ventanabusqueda.Show(this);
+            this.Hide();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Principal ventanabusqueda = new Principal()
             {
             };
             ventanabusqueda.Show(this);

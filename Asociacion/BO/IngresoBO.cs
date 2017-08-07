@@ -18,8 +18,8 @@ namespace Asociacion.BO
         /// <summary>
         /// Método Que autentifica si existe el usuario y contraseña ingresada. 
         /// </summary>
-        /// <param name="ingreso"></param> Recibe como parámetro un ingreso
-        /// <returns></returns> Retorna el ingreso autentificado
+        /// <param name="ingreso">Recibe como parámetro un ingreso</param> 
+        /// <returns>Retorna el ingreso autentificado</returns> 
         public Ingreso Autentificar(Ingreso ingreso)
         {
             return idao.Autentificar(ingreso);

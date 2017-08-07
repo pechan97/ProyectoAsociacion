@@ -20,7 +20,7 @@ namespace Asociacion.BO
         /// <summary>
         /// Método que valora si no está en null los datos que no deben estarlo y registrar
         /// </summary>
-        /// <param name="recibo"></param> Recibe un Recibo como parámetro
+        /// <param name="recibo">Recibe un Recibo como parámetro</param> 
         public bool Registrar(Recibo recibo)
         {
             if (String.IsNullOrEmpty(recibo.Fecha))

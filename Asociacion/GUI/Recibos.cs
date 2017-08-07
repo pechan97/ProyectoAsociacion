@@ -83,5 +83,14 @@ namespace Asociacion.GUI
             ventanabusqueda.Show(this);
             this.Hide();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Principal ventanabusqueda = new Principal()
+            {
+            };
+            ventanabusqueda.Show(this);
+            this.Hide();
+        }
     }
 }

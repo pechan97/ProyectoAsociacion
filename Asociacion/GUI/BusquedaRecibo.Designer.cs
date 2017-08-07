@@ -34,6 +34,7 @@
             this.txtConsulta = new System.Windows.Forms.TextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.btnActualizar = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -103,12 +104,28 @@
             this.btnActualizar.UseVisualStyleBackColor = false;
             this.btnActualizar.Click += new System.EventHandler(this.btnActualizar_Click);
             // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.Transparent;
+            this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.ForeColor = System.Drawing.Color.Transparent;
+            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
+            this.button1.Location = new System.Drawing.Point(0, 1);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(50, 31);
+            this.button1.TabIndex = 9;
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // BusquedaRecibo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(530, 388);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.btnActualizar);
             this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.label1);
@@ -129,5 +146,6 @@
         private System.Windows.Forms.TextBox txtConsulta;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button btnActualizar;
+        private System.Windows.Forms.Button button1;
     }
 }

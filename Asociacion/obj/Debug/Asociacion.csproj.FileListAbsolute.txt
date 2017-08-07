@@ -16,3 +16,4 @@ C:\Users\dgvil\OneDrive\Documentos\Visual Studio 2017\Projects\Asociacion\Asocia
 C:\Users\dgvil\OneDrive\Documentos\Visual Studio 2017\Projects\Asociacion\Asociacion\obj\Debug\Asociacion.GUI.Principal.resources
 C:\Users\dgvil\OneDrive\Documentos\Visual Studio 2017\Projects\Asociacion\Asociacion\obj\Debug\Asociacion.GUI.Recibos.resources
 C:\Users\dgvil\OneDrive\Documentos\Visual Studio 2017\Projects\Asociacion\Asociacion\obj\Debug\Asociacion.GUI.BusquedaRecibo.resources
+C:\Users\dgvil\OneDrive\Documentos\Visual Studio 2017\Projects\Asociacion\Asociacion\obj\Debug\Asociacion.GUI.EditarRecibo.resources

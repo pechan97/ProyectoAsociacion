@@ -289,5 +289,10 @@ namespace Asociacion.GUI
             ventanabusqueda.Show(this);
             this.Hide();
         }
+
+        private void Arquiler_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -65,9 +65,11 @@ namespace Asociacion.GUI
             if (a > 0)
             {
                 btnActualizar.Enabled = true;
+                btnEliminar.Enabled = true;
             }
             else
             {
+                btnEliminar.Enabled = true;
                 btnActualizar.Enabled = false;
             }
         }
@@ -79,6 +81,15 @@ namespace Asociacion.GUI
             };
             ventanabusqueda.Show(this);
             this.Hide();
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            AlquilerDAO rec = new AlquilerDAO();
+            rec.BorrarAlquiler(a);
+            rec.Select("todo", dataGridView1);
+            btnActualizar.Enabled = false;
+            btnEliminar.Enabled = false;
         }
     }
 }

@@ -35,8 +35,10 @@ namespace Asociacion.GUI
             if (a > 0)
             {
                 btnActualizar.Enabled = true;
+                btnEliminar.Enabled = true;
             } else
             {
+                btnEliminar.Enabled = true;
                 btnActualizar.Enabled = false;
             }
         }
@@ -58,6 +60,20 @@ namespace Asociacion.GUI
             };
             ventanabusqueda.Show(this);
             this.Hide();
+        }
+
+        private void BusquedaRecibo_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            ReciboDAO rec = new ReciboDAO();
+            rec.BorrarRecibo(a);
+            rec.Select("Todo", dataGridView1);
+            btnActualizar.Enabled = false;
+            btnEliminar.Enabled = false;
         }
     }
 }

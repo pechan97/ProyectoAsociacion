@@ -185,5 +185,25 @@ namespace Asociacion.DAO
                 throw new Exception(ex.Message);
             }
         }
+        /// <summary>
+        ///  Metodo para borrar recibos
+        /// </summary>
+        /// <param name="id">Recibe id cómo parámetros para eliminar el recibo </param>
+        /// <returns>retorna si lo borró o no.</returns>
+        public bool BorrarRecibo(int id)
+        {
+            using (NpgsqlConnection con = new NpgsqlConnection(Configuracion.CadenaConexion))
+            {
+                con.Open();
+                string sql = @"DELETE FROM recibos
+                                  WHERE id = :id ";
+
+                NpgsqlCommand cmd = new NpgsqlCommand(sql, con);
+                cmd.Parameters.AddWithValue(":id", id);
+
+
+                return Convert.ToInt32(cmd.ExecuteNonQuery()) > 0;
+            }
+        }
     }
 }
